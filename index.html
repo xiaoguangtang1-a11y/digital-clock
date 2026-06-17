@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多时区数字时钟</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌍 世界时钟</h1>
+            <p class="subtitle">实时多时区显示</p>
+        </header>
+
+        <div class="controls">
+            <button id="addClockBtn" class="btn btn-add">
+                <span class="btn-icon">+</span> 添加时区
+            </button>
+            <button id="resetBtn" class="btn btn-reset">
+                <span class="btn-icon">↻</span> 重置
+            </button>
+        </div>
+
+        <div id="clocksContainer" class="clocks-container">
+            <!-- 时钟会动态添加到这里 -->
+        </div>
+
+        <div class="empty-state" id="emptyState">
+            <p>📍 点击"添加时区"来开始</p>
+        </div>
+    </div>
+
+    <!-- 时区选择模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>选择时区</h2>
+                <span class="close">&times;</span>
+            </div>
+            
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="timezoneSearch" 
+                    placeholder="搜索时区... (例如: 北京, Tokyo, America)"
+                    class="search-input"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <div id="timezoneList" class="timezone-list">
+                <!-- 时区列表会动态填充 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
